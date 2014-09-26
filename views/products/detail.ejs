@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%=product.name%> <%=product.brand%> <%=product.type%></title>
+</head>
+<body>
+	<h1><%=product.name%> <%=product.brand%> <%=product.type%></h1>
+	<h2>Characteristics</h2>
+	<ul>
+		<% product.characteristics.forEach(function(characteristic){ %>
+			<li><%=characteristic.base %> - <%=characteristic.adicion%> - <%=characteristic.material%> - <%=characteristic.transitions%></li>			
+		<%})%>
+	</ul>
+	<h2>Precios</h2>
+	<ul>
+		<% product.precios.forEach(function(precio){ %>
+			<li><%=precio.precio_venta%></li>
+			<li><%=precio.precio_bruto%></li>
+		<%})%>
+	</ul>
+</body>
+</html>
